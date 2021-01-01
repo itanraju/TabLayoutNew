@@ -8,12 +8,17 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.example.tablayoutnew.ComedyFragment;
-import com.example.tablayoutnew.LoveFragment;
-import com.example.tablayoutnew.MastiFragment;
+import com.example.tablayoutnew.BirthdayFragment;
+import com.example.tablayoutnew.FriendshipFragment;
+import com.example.tablayoutnew.GodFragment;
+import com.example.tablayoutnew.GujratiFragment;
+import com.example.tablayoutnew.HindiFragment;
+import com.example.tablayoutnew.Love;
+import com.example.tablayoutnew.PopularFragment;
 import com.example.tablayoutnew.R;
 import com.example.tablayoutnew.SadFragment;
-import com.example.tablayoutnew.crazyFragment;
+import com.example.tablayoutnew.WeddingFragment;
+import com.example.tablayoutnew.WishFragment;
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
@@ -22,7 +27,7 @@ import com.example.tablayoutnew.crazyFragment;
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @StringRes
-    private static final int[] TAB_TITLES = new int[]{R.string.crazy,R.string.love,R.string.masti,R.string.comedy,R.string.sad};
+    private static final int[] TAB_TITLES = new int[]{R.string.birthday,R.string.firendship,R.string.god,R.string.gujrati,R.string.hindi,R.string.love,R.string.popular,R.string.sad,R.string.wedding,R.string.wish};
     private final Context mContext;
 
     public SectionsPagerAdapter(Context context, FragmentManager fm) {
@@ -37,23 +42,42 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         switch (position)
         {
             case 0:
-                fragment=new crazyFragment();
+                fragment=new BirthdayFragment();
                 break;
 
             case 1:
-                fragment=new LoveFragment();
+                fragment=new FriendshipFragment();
                 break;
 
             case 2:
-                fragment=new MastiFragment();
+                fragment=new GodFragment();
                 break;
 
             case 3:
-                fragment=new ComedyFragment();
+                fragment=new GujratiFragment();
                 break;
 
             case 4:
+                fragment=new HindiFragment();
+                break;
+
+            case 5:
+                fragment=new Love();
+                break;
+            case 6:
+                fragment=new PopularFragment();
+                break;
+
+            case 7:
                 fragment=new SadFragment();
+                break;
+
+            case 8:
+                fragment=new WeddingFragment();
+                break;
+
+            case 9:
+                fragment=new WishFragment();
                 break;
         }
         return fragment;
@@ -68,6 +92,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         // Show 2 total pages.
-        return 5;
+        return 10;
     }
 }

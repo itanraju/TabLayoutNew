@@ -26,6 +26,8 @@
             android:layout_width="match_parent"
             app:tabSelectedTextColor="@color/white"
             android:layout_height="wrap_content"
+            app:tabGravity="fill"
+            app:tabMode="scrollable"
             android:background="?attr/colorPrimary" />
     </com.google.android.material.appbar.AppBarLayout>
 
