@@ -5,12 +5,9 @@
     android:layout_height="match_parent"
     tools:context=".WishFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textSize="30dp"
-        android:textAlignment="center"
-        android:text="Wish"  />
+        android:id="@+id/recycleView"></androidx.recyclerview.widget.RecyclerView>
 
 </FrameLayout>
